@@ -1,0 +1,23 @@
+{
+  "name": "Marvel-char-viewer",
+  "version": "1.0.0",
+  "description": "MArvel character api for Volcano",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Thijs Looijen",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "@parcel/transformer-sass": "^2.3.2",
+    "parcel": "^2.3.2"
+  },
+  "dependencies": {
+    "core-js": "^3.21.1",
+    "fractional": "^1.0.0",
+    "regenerator-runtime": "^0.13.9"
+  }
+}
