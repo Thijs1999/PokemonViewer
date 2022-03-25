@@ -1,0 +1,7 @@
+.container {
+  position: absolute;
+  @include positionCenter;
+  height: 25rem;
+  width: 25rem;
+  background-color: $color-secondary;
+}
