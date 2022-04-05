@@ -8,17 +8,17 @@
       href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="./dist/Pokeball.866449ca.png" />
+    <link rel="shortcut icon" href="./src/img/Pokeball.png" />
 
     <link rel="stylesheet" href="./css/style.css" />
-    <script defer src="./dist/index.e37f48ea.js"></script>
+    <script type="module" defer src="src/js/controller.js"></script>
 
     <title>Get information about your favorite Pokemon!</title>
   </head>
   <body>
     <div class="container">
       <header class="header">
-        <img class="header__logo" src="./dist/2560px-International_Pokémon_logo.svg.00080c67.png" alt="Pokemon logo">
+        <img class="header__logo" src="./src/img/2560px-International_Pokémon_logo.png" alt="Pokemon logo">
         <form class="search" action="#">
           <input type="text" class="search__field" placeholder="Search all your favorite pokemon!">
           <button class="btn search__button">
@@ -44,7 +44,7 @@
       </header>
       <main>
           <div class="results">
-            <figure class="card card--normal">
+            <!-- <figure class="card card--normal">
               <div class="card__image-container">
                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png" alt="Eevee" class="card__image">   
               </div>
@@ -102,7 +102,7 @@
                   </h4>
                 </div>
               </figcaption>
-            </figure>
+            </figure> -->
           </div>
       </main>
     </div>
