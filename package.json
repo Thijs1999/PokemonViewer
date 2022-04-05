@@ -1,5 +1,5 @@
 {
-  "name": "marvelviewer",
+  "name": "pokemonviewer",
   "version": "1.0.0",
   "description": "Marvel character api for Volcano",
   "main": "index.js",

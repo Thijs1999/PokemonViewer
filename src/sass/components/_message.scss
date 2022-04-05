@@ -1,0 +1,9 @@
+.message,
+.error {
+    border-radius: $border-radius-large;
+    overflow: hidden;
+
+    svg {
+        width: 10rem;
+    }
+}

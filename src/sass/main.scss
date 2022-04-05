@@ -8,7 +8,15 @@
 @import 'base/utilities';
 
 @import 'components/button';
+@import 'components/bookmark';
+@import 'components/card';
+@import 'components/search';
+@import 'components/spinner';
+@import 'components/message';
 
-@import 'layout/grid';
+@import 'layout/container';
+@import 'layout/header';
+@import 'layout/nav';
+@import 'layout/results';
 
 @import 'pages/home';

@@ -1,8 +1,8 @@
-class searchView {
+class SearchView {
   #parentEL = document.querySelector('.search');
 
   getQuery() {
-    const query = this.#parentEL.querySelector('.search__field').value;
+    const query = this.#parentEL.querySelector('.search__field').value.toLowerCase();
     this.#clearInput();
     return query;
   }
@@ -19,4 +19,4 @@ class searchView {
   }
 }
 
-export default new searchView();
+export default new SearchView();

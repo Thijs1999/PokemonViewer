@@ -9,31 +9,11 @@
 html {
   // This defines what 1rem is, 1rem is now 10 pixels
   font-size: 62.5%;
-
-  @include respond(tab-land) {
-    font-size: 56.25%;
-  }
-
-  @include respond(tab-port) {
-    font-size: 50%;
-  }
-
-  @include respond(big-desktop) {
-    font-size: 75%;
-  }
 }
 
 body {
   box-sizing: border-box;
   padding: 3rem;
-  background-image: linear-gradient(
-    to right,
-    $color-primary,
-    $color-primary-dark
-  );
+  background-image: $gradient;
   background-size: cover;
-
-  @include respond(tab-port) {
-    padding: 0rem;
-  }
 }

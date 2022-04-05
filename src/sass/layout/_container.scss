@@ -1,0 +1,9 @@
+.container {
+    // Grid layout for container
+    display: grid;
+    grid-template-rows: 10rem minmax(100rem, auto);
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'head'
+    'results';
+}

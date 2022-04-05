@@ -1,111 +1,37 @@
-.btn {
-  &,
-  &:link,
-  &:visited {
-    display: inline-block;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    border-radius: 10rem;
-    transition: all 0.2s;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    position: relative;
-    font-size: $default-font-size;
+%btn {
+  cursor: pointer;
+  background-image: $gradient-2;
+  border-radius: $border-radius-huge;
+  border: none;
+  text-transform: uppercase;
+  color: $color-secondary;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
 
-    // Changes for the <button> element
-    border: none;
-    cursor: pointer;
-
-    &:hover {
-      transform: translateY(-3px);
-      box-shadow: $shadow-2;
-
-      &::after {
-        transform: scaleX(1.4) scaleY(1.6);
-        -webkit-transform: scaleX(1.4) scaleY(1.6);
-        -moz-transform: scaleX(1.4) scaleY(1.6);
-        -ms-transform: scaleX(1.4) scaleY(1.6);
-        -o-transform: scaleX(1.4) scaleY(1.6);
-        opacity: 0;
-      }
-    }
-
-    &:active,
-    &:focus {
-      transform: translateY(-1px);
-      -webkit-transform: translateY(-1px);
-      -moz-transform: translateY(-1px);
-      -ms-transform: translateY(-1px);
-      -o-transform: translateY(-1px);
-      box-shadow: $shadow-3;
-    }
+  &:hover {
+    transform: scale(1.05);
   }
 
-  &::after {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    border-radius: 10rem;
-    transition: all 0.4s;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -ms-transition: all 0.4s;
-    -o-transition: all 0.4s;
+  &:focus {
+    outline: none;
   }
 
-  &--white {
-    background-color: $color-white;
-    color: $color-grey-dark;
-
-    &::after {
-      background-color: $color-white;
-    }
-  }
-
-  &--green {
-    background-color: $color-primary;
-    color: $color-white;
-
-    &::after {
-      background-color: $color-primary;
-    }
-  }
-
-  &--animated {
-    animation: moveInBottom 0.75s ease-out;
-    -webkit-animation: moveInBottom 0.75s ease-out;
+  & > *:first-child {
+    margin-right: 1rem;
   }
 }
 
-.btn-text {
-  &:link,
-  &:visited {
-    font-size: $default-font-size;
-    color: $color-primary;
-    display: inline-block;
-    text-decoration: none;
-    border-bottom: 1px solid $color-primary;
-    padding: 3px;
-    transition: all 0.2s;
-  }
+.btn {
+  @extend %btn;
 
-  &:hover {
-    background-color: $color-primary;
-    color: $color-white;
-    box-shadow: $shadow-2;
-    transform: translateY(-2px);
-  }
+  padding: 1.5rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 600;
 
-  &:active {
-    box-shadow: $shadow-3;
-    transform: translateY(0px);
+  svg {
+    height: 2.25rem;
+    width: 2.25rem;
+    fill: currentColor;
   }
 }

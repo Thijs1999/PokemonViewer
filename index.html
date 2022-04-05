@@ -8,18 +8,123 @@
       href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="./src/img/marvel-282124.png" />
+    <link rel="shortcut icon" href="./src/img/Pokeball.png" />
 
     <link rel="stylesheet" href="./css/style.css" />
     <script type="module" defer src="src/js/controller.js"></script>
 
-    <title>Get information about your favorite superheroes!</title>
+    <title>Get information about your favorite Pokemon!</title>
   </head>
   <body>
     <div class="container">
-      <header>
-        <h1></h1>
+      <header class="header">
+        <img class="header__logo" src="./src/img/2560px-International_Pokémon_logo.svg.png" alt="Pokemon logo">
+        <form class="search" action="#">
+          <input type="text" class="search__field" placeholder="Search all your favorite pokemon!">
+          <button class="btn search__button">
+            <svg>
+              <use href="src/img/icons.svg#icon-search"></use>
+            </svg>
+            <span>Search</span>
+          </button>
+        </form>
+
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav-item">
+              <button class="nav__btn nav__btn--reload">
+                <svg class="nav__icon">
+                  <use href="src/img/icons.svg#icon-loader"></use>
+                </svg>
+                <span>Reload!</span>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav__btn nav__btn--bookmarks">
+                <svg class="nav__icon">
+                  <use href="src/img/icons.svg#icon-bookmark"></use>
+                </svg>
+                <span>Bookmarks</span>
+              </button>
+              <div class="bookmarks">
+                <ul class="bookmarks__list">
+                  <div class="message">
+                    <svg>
+                      <use href="src/img/icons.svg#icon-smile"></use>
+                    </svg>
+                  </div>
+                  <p>No bookmarks yet. Find your favorite Pokemon!</p>
+<!-- 
+                  <li class="preview">
+                    <a href="#" class="preview__link">
+                      <figure class="preview__fig">
+                        <img src="" alt="Pokemon preview">
+                      </figure>
+                    </a>
+                  </li> -->
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
       </header>
+      <main>
+          <!-- <div class="results">
+            <figure class="card card--normal">
+              <div class="card__image-container">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png" alt="Eevee" class="card__image">   
+              </div>
+              
+              <figcaption class="card__caption">
+                <h1 class="card__name">Eevee</h1>
+            
+                <h3 class="card__type">
+                  normal
+                </h3>
+            
+                <table class="card__stats">
+                  <tbody><tr>
+                    <th>HP</th>
+                    <td>55</td>
+                  </tr>
+                  <tr>
+                    <th>Attack</th>
+                    <td>55</td>
+                  </tr>
+                  
+                  <tr>
+                    <th>Defense</th>
+                    <td>50</td>
+                  </tr>
+            
+                  <tr>
+                    <th>Special Attack</th>
+                    <td>45</td>
+                  </tr>
+                  <tr>
+                    <th>Special Defense</th>
+                    <td>65</td>
+                  </tr>
+                  <tr>
+                    <th>Speed</th>  
+                    <td>55</td>
+                  </tr>
+                </tbody></table>
+                
+                <div class="card__abilities">
+                  <h4 class="card__ability">
+                    <span class="card__label">Ability</span>
+                    Run Away
+                  </h4>
+                  <h4 class="card__ability">
+                    <span class="card__label">Hidden Ability</span>
+                    Anticipation
+                  </h4>
+                </div>
+              </figcaption>
+            </figure>
+          </div> -->
+      </main>
     </div>
   </body>
 </html>

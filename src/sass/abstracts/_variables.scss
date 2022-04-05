@@ -1,18 +1,74 @@
-$color-primary: #ed1d24;
-$color-primary-light: #f14a50;
-$color-primary-dark: #8e1116;
+// Colors used in page design
+$color-primary: #0A285F ;
+$color-primary-light: #3b537f;
+$color-primary-dark: #08204c;
 
 $color-secondary: #ffffff;
 
-// Colors
+$color-teriary: #FFCC00;
+$color-teriary-dark: #D5A100;
+$color-teriary-light: #ffd633;
+
+$color-quaternary: #FB1B1B;
+$color-quaternary-dark: #c91616;
+$color-quaternary-light: #fc4949;
+
 $color-grey-light-1: #f7f7f7;
 $color-grey-light-2: #eee;
+$color-grey-light-3: #c5c5c5;
 
 $color-grey-dark: #777;
 $color-grey-dark-2: #999;
 $color-grey-dark-3: #333;
 $color-white: #fff;
 $color-black: #000;
+
+// Colors used for Pokemon cards
+$color-normal-1: #FDBB2D;
+$color-normal-2: #3A1C71;
+$color-normal-3: #C08A53;
+
+$color-water-1: #1CB5E0;
+$color-water-2: #000851;
+
+$color-electric-1: #ffde00;
+$color-electric-2: #e8ff99;
+
+$color-fire-1: #c71800;
+$color-fire-2: #fcc245;
+
+$color-psychic-1: #ffa7f9;
+$color-psychic-2: #ff2cc3;
+$color-psychic-3: #ffe3a7;
+
+$color-dark-1: #191919;
+$color-dark-2: #100b32;
+$color-dark-3: #5c0249;
+
+$color-grass-1: #c4da3d;
+$color-grass-2: #6e7f0e;
+$color-grass-3: #275009;
+
+$color-ice-1: #caeaf6;
+$color-ice-2: #a0eaf1;
+$color-ice-3: #6fb8eb;
+
+$color-fairy-1: #ffe6f0;
+$color-fairy-2: #ffc5e0;
+$color-fairy-3: #ffa6b9;
+$color-fairy-4: #ff8a95;
+
+$color-rock-1: #873e23;
+$color-rock-2: #e28743;
+
+$color-steel-1: #393B45;
+$color-steel-2: #6E7889;
+
+$color-dragon-1: #b59927;
+$color-dragon-2: #64520a;
+
+$color-poison-1: #8c00ff;
+$color-poison-2: #200536;
 
 //Grid
 $grid-width: 114rem;
@@ -32,3 +88,16 @@ $shadow-5: 0 2.5rem 4rem rgba($color-black, 0.5);
 
 // Border radius
 $border-radius: 3px;
+$border-radius-large: 1rem;
+$border-radius-huge: 10rem;
+
+$gradient: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark);
+
+$gradient-2: linear-gradient(
+    to right,
+    $color-teriary,
+    $color-teriary-dark
+)

@@ -1,0 +1,7 @@
+.results {
+    padding : 2.5rem;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10rem 2.5rem;
+}

@@ -1,7 +1,12 @@
 .container {
-  position: absolute;
-  @include positionCenter;
-  height: 25rem;
-  width: 25rem;
   background-color: $color-secondary;
+  border-radius: $border-radius-large;
+  margin: 4vw auto;
+  max-width: 120rem;
+  min-height: 100rem;
+  overflow: hidden;
+}
+
+main {
+  text-align: center;
 }

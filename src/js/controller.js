@@ -1,41 +1,49 @@
-import * as model from './model';
-import recipeView from './views/recipeView';
-import searchView from './views/searchView';
+import * as model from './model.js';
+import resultsView from './views/resultsView.js';
+import searchView from './views/searchView.js';
+import reloadView from './views/reloadView.js';
 
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
-
-const controlRecipes = async function () {
+const controlPokemon = async function () {
   try {
-    const id = window.location.hash.slice(1);
+    resultsView.renderSpinner();
 
-    if (!id) return;
-    recipeView.renderSpinner();
+    // (1 Loading 8 random pokemon from the model
+    await model.loadPokemon();
 
-    // 1) Loading recipe
-    await model.loadRecipe(id);
-
-    // 2) Rendering recipe
-    recipeView.render(model.state.recipe);
+    // (2 render the 8 random pokemon cards
+    resultsView.render(model.state.pokemon);
   } catch (err) {
-    recipeView.renderError();
+    console.log(err);
+    resultsView.renderError();
   }
 };
 
 const controlSearchResults = async function () {
   try {
-    const query = searchView.getQuery();
-    if (!query) return;
+    resultsView.renderSpinner();
 
+    // (1 Get the query from the search
+    const query = searchView.getQuery();
+
+    if (!query) throw Error;
+
+    // (2 Load the Pokemon with the query
     await model.loadSearchResults(query);
+
+    // (3 Render the Pokemon that where found
+    resultsView.render(model.state.search.result);
   } catch (err) {
-    console.error(err);
+    resultsView.renderError();
   }
 };
 
+
 const init = function () {
-  recipeView.addHandlerRenderer(controlRecipes);
+  resultsView.addHandlerRenderer(controlPokemon);
   searchView.addHandlerSearch(controlSearchResults);
+  reloadView.addHandlerRenderer(controlPokemon);
 };
 
 init();
+
+
