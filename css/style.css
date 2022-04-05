@@ -197,6 +197,17 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.02rem; }
+  .card__like-button svg {
+    width: 4rem;
+    height: 4rem;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: -7.5%;
+    color: inherit;
+    padding: .5rem;
+    opacity: .9;
+    color: currentColor; }
   .card__stats {
     margin: 1rem 0;
     width: 100%; }
