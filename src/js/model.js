@@ -1,7 +1,5 @@
 import { API_URL } from './config.js';
 import { getJSON } from './helpers.js';
-import { RES_PER_PAGE } from './config.js';
-import { generatePokemonId } from './helpers.js';
 
 export const state = {
   pokemon: [],
@@ -9,9 +7,6 @@ export const state = {
     query: '',
     result: [],
   },
-  lastId: 8,
-  firstId: 1,
-  totalResults: 0
 };
 
 const buildPokemonData = (pokemon) => {
@@ -28,33 +23,17 @@ const buildPokemonData = (pokemon) => {
     ability: pokemon.abilities[0].ability.name,
     hiddenAbility: pokemon.abilities[pokemon.abilities.length - 1].ability.name,
     image: pokemon.sprites.other.home.front_default,
-  }
-}
-
-export const loadPokemon = async function () {
-  try {
-    state.pokemon = [];
-    const data = [];
-    
-    for (let i = 1;  i <= RES_PER_PAGE; i++) {
-      data.push(await getJSON(`${API_URL}${generatePokemonId()}`));
-    }
-
-    state.pokemon = data.map((pokemon) => buildPokemonData(pokemon));
-  } catch (err) {
-    throw err;
-  }
+  };
 };
 
-export const loadSearchResults = async function (query) {
+export const loadSearchResult = async (query) => {
   try {
-    state.search.result = [];
     state.search.query = query;
     const data = await getJSON(`${API_URL}${query}`);
 
-    state.search.result.push(buildPokemonData(data));
+    console.log(data);
+    state.search.result = data;
   } catch (err) {
     throw err;
   }
 };
-
